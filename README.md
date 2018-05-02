@@ -1,13 +1,14 @@
-# sv-cli
+# Small Victories CLI
 
-CLI tool to build Small Victories sites locally.
+The Small Victories CLI is used to build Small Victories sites from the command line.
 
-[Homepage](https://www.smallvictori.es) |
-[Twitter](https://twitter.com/smvico)
+For more information about Small Victories see the [Small Victories Homepage](https://www.smallvictori.es).
+
+For problems directly related to the CLI, [add an issue on GitHub](https://github.com/smallvictories/sv-cli/issues/new).
+
+For questions or to get in touch, find us on [Twitter](https://twitter.com/smvico).
 
 ## Installation
-
-### Install script
 
 ### Homebrew (OS X)
 
@@ -21,20 +22,44 @@ $ brew install sv
 
 Bare zip archives per release version are available at https://github.com/smallvictories/sv-cli/releases/
 
-## Quickstart
+## Verify
 
-First you must create a folder with an `_sv_settings.txt` file which has a `theme` attribute.
+To verify you have successfully installed the Small Victories CLI, use the sv --version command:
 
 ```
-theme: html
+$ sv --version
 ```
 
-Then run `sv`
+You should see a response of sv/x.y.z. If you don’t then the Small Victories CLI has not been installed correctly.
+
+## Getting Started
+
+First, you need to create a new folder for your site.
+
+```
+$ mkdir ~/site
+```
+
+Then you need to move into the site folder.
+
+```
+$ cd ~/site
+```
+
+Now you need to create an `_sv_settings.txt` file which has a `theme` attribute.
+
+```
+$ echo 'theme: blank' > _sv_settings.txt
+```
+
+The theme attribute tells the Small Victories CLI which type of Small Victories site to build. You can find more information on the different types of themes Small Victories supports below.
+
+Finally you can run the Small Victories CLI to generate and server your site.
 
 ```
 $ sv start
 ```
 
-You can then view your site at http://localhost:2015
+You now view your site at http://localhost:2015
 
-SV will automatically watch for changes and rebuild your site.
+SV will automatically watch for changes and rebuild your site as you add and update files in the site folder.
