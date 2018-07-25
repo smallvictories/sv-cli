@@ -15,6 +15,7 @@ For questions or to get in touch, find us on [Twitter](https://twitter.com/smvic
 Homebrew can be installed via [brew.sh](http://brew.sh)
 
 ```
+$ brew tap sv/cli
 $ brew install sv
 ```
 
